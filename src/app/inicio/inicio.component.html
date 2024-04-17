@@ -28,167 +28,26 @@
 
     <h2>Jogos</h2>
     <mat-grid-list cols="3">
-        <mat-grid-tile>
+        <mat-grid-tile *ngFor="let produto of produtos">
             <mat-card class="example-card">
-                <img mat-card-image src="./assets/img/starfield.PNG" alt="Starfield">
+                <img mat-card-image src="./assets/img/{{produto.foto}}" alt="Starfield">
         
                 <mat-card-header>
-                  <mat-card-title>Starfield</mat-card-title>
+                  <mat-card-title>{{produto.produto}}</mat-card-title>
                 </mat-card-header>
                 
                 <mat-card-content>
                   <p>
-                    Jogo de exploração espacial.
+                    {{produto.descricao}}
                   </p>
                 </mat-card-content>
                 <mat-card-actions>
-                  <p>R$ 350,00</p>
+                  <p>{{produto.preco | currency : 'BRL'}}</p>
                   <button mat-button>Comprar</button>
                 </mat-card-actions>
               </mat-card>
         </mat-grid-tile>
-        <mat-grid-tile>
-            <mat-card class="example-card">
-                <img mat-card-image src="./assets/img/halo.PNG" alt="halo">
         
-                <mat-card-header>
-                  <mat-card-title>Halo infinite</mat-card-title>
-                </mat-card-header>
-                
-                <mat-card-content>
-                  <p>
-                    Ação, FPS.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <p>R$ 250,00</p>
-                  <button mat-button>Comprar</button>
-                </mat-card-actions>
-              </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <mat-card class="example-card">
-                <img mat-card-image src="./assets/img/diablo.PNG" alt="diablo">
-        
-                <mat-card-header>
-                  <mat-card-title>Diablo IV Edição Ultimate</mat-card-title>
-                </mat-card-header>
-                
-                <mat-card-content>
-                  <p>
-                    Hack and Slash.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <p>R$ 500,00</p>
-                  <button mat-button>Comprar</button>
-                </mat-card-actions>
-              </mat-card>
-        </mat-grid-tile>
-
-      </mat-grid-list>
-
-      <h2>Jogos em promoção</h2>
-      <mat-grid-list cols="3">
-        <mat-grid-tile>
-          <mat-card class="example-card">
-              <img mat-card-image src="./assets/img/cod.PNG" alt="Call of Duty">
-      
-              <mat-card-header>
-                <mat-card-title>Call of Duty MW3</mat-card-title>
-              </mat-card-header>
-              
-              <mat-card-content>
-                <p>
-                  FPS.
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-                <p>R$ 100,00</p>
-                <button mat-button>Comprar</button>
-              </mat-card-actions>
-            </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card class="example-card">
-            <img mat-card-image src="./assets/img/ghostwire.PNG" alt="ghost">
-    
-            <mat-card-header>
-              <mat-card-title>Ghostwire Tokyo</mat-card-title>
-            </mat-card-header>
-            
-            <mat-card-content>
-              <p>
-                Terror, Ação.
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <p>R$ 150,00</p>
-              <button mat-button>Comprar</button>
-            </mat-card-actions>
-          </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="example-card">
-          <img mat-card-image src="./assets/img/redfall.PNG" alt="Redfall">
-  
-          <mat-card-header>
-            <mat-card-title>Redfall</mat-card-title>
-          </mat-card-header>
-          
-          <mat-card-content>
-            <p>
-              Aventura de tiro.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <p>R$ 50,00</p>
-            <button mat-button>Comprar</button>
-          </mat-card-actions>
-        </mat-card>
-  </mat-grid-tile>
-      </mat-grid-list>
-
-      <h2>Assinaturas</h2>
-      <mat-grid-list cols="3">
-    <mat-grid-tile>
-      <mat-card class="example-card">
-          <img mat-card-image src="./assets/img/gamepassultimate.PNG" alt="Assinatura">
-  
-          <mat-card-header>
-            <mat-card-title>Game Pass Ultimate</mat-card-title>
-          </mat-card-header>
-          
-          <mat-card-content>
-            <p>
-              1 mês.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <p>R$ 45,00</p>
-            <button mat-button>Comprar</button>
-          </mat-card-actions>
-        </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card class="example-card">
-        <img mat-card-image src="./assets/img/gamepasspc.PNG" alt="Assinatura">
-
-        <mat-card-header>
-          <mat-card-title>Game Pass PC</mat-card-title>
-        </mat-card-header>
-        
-        <mat-card-content>
-          <p>
-           1 mês.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <p>R$ 30,00</p>
-          <button mat-button>Comprar</button>
-        </mat-card-actions>
-      </mat-card>
-</mat-grid-tile>
       </mat-grid-list>
        
 
